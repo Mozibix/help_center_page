@@ -5,31 +5,33 @@
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  font-family: Mulish;
 }
 
 .navbar {
-  height: 67px;
-  width: 1211px;
-  inset: 46px 30px;
+  height: 88px;
+  color: $nav_text;
+  padding: 16px 112px;
 
-  @media screen and (max-width: 800px) {
-    height: 40px;
-    width: 100%;
-    inset: 5px 0;
+  @media screen and (max-width: 428px) {
+
+    // navbar none
+    display: none;
   }
   .navbar_inner {
     display: flex;
     justify-content: space-between;
-    place-items: center;
-
+    align-items: center;
     .logo {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 8px;
       P {
-        font-family: Roboto Slab;
-        font-size: 43px;
+        font-style: normal;
         font-weight: 700;
-        line-height: 27px;
-        letter-spacing: 0em;
-        text-align: left;
+        font-size: 20px;
+        line-height: 25px;
 
         @media screen and (max-width: 800px) {
           font-size: 30px;
@@ -39,40 +41,37 @@
 
     ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       list-style: none;
-      font-family: Inter;
+      font-style: normal;
+      font-weight: 600;
       font-size: 16px;
-      font-weight: 400;
-      line-height: 27px;
-      letter-spacing: 0em;
-      text-align: left;
-      inset: 0 120px;
+      line-height: 20px;
+      width: 511px;
 
       @media screen and (max-width: 800px) {
         display: none;
       }
       li {
-        margin: 0 81px;
+        margin-right: 39px;
       }
     }
     button {
-      background-color: $black;
-      color: $white;
-      height: 47px;
-      width: 122px;
+      background-color: $nav_btn;
+      color: $nav_btncol;
+      border: none;
+      width: 163px;
+      height: 56px;
       border-radius: 8px;
-      font-family: Roboto Slab;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 27px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
       letter-spacing: 0em;
       text-align: center;
 
       @media screen and (max-width: 800px) {
         height: 30px;
         width: 100px;
-        border: 1px solid;
       }
     }
   }

@@ -1,0 +1,140 @@
+@import "./colorhelpers.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Mulish;
+}
+
+section {
+  &.gridsection {
+    background-color: $secondary-bg;
+    height: 30rem;
+
+    @media screen and (max-width: 428px) {
+      width: 26.6rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      gap: 0;
+      align-items: center;
+      background-color: $white;
+      height: 184px;
+      width: 992px;
+      border-radius: 0px;
+      inset: -4rem 10rem;
+      @media screen and (max-width: 428px) {
+        grid-template-columns: repeat(1, auto);
+        inset: 0.5rem 9rem;
+        width: 0px;
+        height: 88px;
+      }
+
+      &_inner {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $white;
+        gap: 27px;
+        height: 184px;
+        width: 329px;
+        padding-top: 55px;
+        padding-left: 65px;
+        border: 1px solid $border1;
+        @media screen and (max-width: 428px) {
+          grid-template-columns: repeat(1, auto);
+          inset: -1.5rem 4rem;
+          padding-top: 24px;
+          padding-left: 0px;
+          width: 280px;
+          height: 88px;
+        }
+        &:hover {
+          border: 2px solid $hero_bg;
+        }
+
+        img {
+          height: 52.5px;
+          width: 52.5px;
+          border-radius: 0px;
+          @media screen and (max-width: 428px) {
+            height: 36px;
+            width: 36px;
+          }
+        }
+
+        .details {
+          p {
+            text-align: right;
+
+            @media screen and (max-width: 428px) {
+              text-align: center;
+            }
+            &.link {
+              font-size: 20px;
+              text-align: right;
+              font-weight: 700;
+              line-height: 25px;
+              letter-spacing: 0em;
+              margin-bottom: 5px;
+              @media screen and (max-width: 428px) {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0em;
+              }
+
+              &.post {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .more {
+      width: 948px;
+      border-radius: 0px;
+      margin: 7.5rem 10.2rem;
+
+      @media screen and (max-width: 428px) {
+        margin: 20.8rem 4.28rem;
+      }
+
+      &_inner {
+        display: flex;
+        background-color: $white;
+        align-items: center;
+        border: 1px solid $border1;
+        height: 48px;
+        width: 658px;
+        cursor: pointer;
+        @media screen and (max-width: 428px) {
+          width: 280px;
+        }
+
+        img {
+          padding-left: 66px;
+          padding-right: 38px;
+        }
+
+        p {
+          color: $hero_bg;
+          font-family: Mulish;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 25px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

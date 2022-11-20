@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../images/Logo.png";
 import "../styles/navbar.scss";
 
 export const NavBar = () => {
@@ -7,15 +8,17 @@ export const NavBar = () => {
       <div className="navbar">
         <div className="navbar_inner">
           <div className="logo">
-            <p>Iyanex</p>
+            <img src={logo} alt="logo" />
+            <p>Voxclips</p>
           </div>
           <ul>
             <li>Home</li>
-            <li>Blog</li>
-            <li>About</li>
+            <li>About Us</li>
+            <li>Use cases</li>
             <li>Contact</li>
+            <li>How it works</li>
           </ul>
-          <button>Sign Up</button>
+          <button>Create video</button>
         </div>
       </div>
     </>

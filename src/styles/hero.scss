@@ -1,0 +1,115 @@
+@import "./colorhelpers.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: Mulish;
+}
+
+section {
+  &.hero {
+    background-color: $hero_bg;
+    color: $white;
+    text-align: center;
+    height: 496px;
+
+    @media screen and (max-width: 428px) {
+      width: 26.6rem;
+      height: 280px;
+    }
+    .hero_inner {
+      padding: 60px 0;
+      p {
+        &.header_text {
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 60px;
+          letter-spacing: 0em;
+
+          @media screen and (max-width: 428px) {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 35px;
+            letter-spacing: 0em;
+          }
+        }
+
+        &.info_text {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 25px;
+          letter-spacing: 0em;
+          margin-bottom: 104px;
+
+          @media screen and (max-width: 428px) {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 0em;
+            margin-bottom: 56px;
+          }
+        }
+      }
+
+      img {
+        inset: 14px 60px;
+        z-index: 1;
+        cursor: pointer;
+
+        @media screen and (max-width: 428px) {
+          inset: 5px 30px;
+          height: 17.05893898010254px;
+          width: 17.048938751220703px;
+          border-radius: 0px;
+        }
+      }
+
+      input {
+        width: 539px;
+        height: 60px;
+        background: $white;
+        border: none;
+        outline: none;
+        padding-left: 80px;
+        border-radius: 30px;
+
+        @media screen and (max-width: 428px) {
+          height: 32px;
+          padding-left: 40px;
+          width: 250px;
+          border-radius: 30px;
+        }
+
+        ::placeholder {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 24px 0;
+        padding-bottom: 131px;
+
+        li {
+          margin-right: 33px;
+          cursor: pointer;
+          @media screen and (max-width: 428px) {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            letter-spacing: 0em;
+          }
+        }
+      }
+    }
+  }
+}
